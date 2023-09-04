@@ -1,0 +1,157 @@
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+// 480px +
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+// 768px +
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+//1200px
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section__tittle {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  @media screen and (max-width: 1199px) {
+    & {
+      font-size: 28px;
+      line-height: 1.17;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.section--other-background {
+  background-color: #f5f4fa;
+}
+
+.team-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+.team-list__item {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 1199px) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-left: 0px;
+    margin-top: 0px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.team-card__tittle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.team-card__text {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+
+.social-list {
+    display: flex;
+    justify-content: center;   
+ }
+ .social-list__item{ 
+     .footer-social-container &:not(:last-child) {
+         margin-right: 10px;
+     }
+ }
+ 
+ 
+ .social-list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 44px;
+     height: 44px;
+     border-radius: 50%;
+     color: #2196f3;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+     &:focus,
+     &:hover {
+         background-color: #2196f3;
+     }
+ }
+ 
+ .social-list__icon {
+     fill: #afb1b8;
+     transition-property: fill;
+     transition-duration: 250ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     .social-list__link:focus &,
+     .social-list__link:hover & {
+         fill: #ffffff;
+     }
+ }
