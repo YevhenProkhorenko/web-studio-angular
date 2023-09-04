@@ -1,6 +1,64 @@
 <section class="hero overlay">
     <div class="container">
       <h1 class="hero__tittle">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-      <button type="button" class="button" data-modal-open>Заказать услугу</button>
+      <button type="button" class="button" (click)="openModal()">Заказать услугу</button>
+    </div>
+    <div 
+    class="backdrop-modal" 
+    *ngIf="showModalMenu"
+    [class.is-hidden]="!showModalMenu">
+      <div class="modal">
+        <form class="modal-form">
+          <p class="modal-form__tittle">Оставьте свои данные, мы вам перезвоним</p>
+
+          <label class="modal-form__label" for="name">Имя</label>
+          <div class="modal-icons-wrapper">
+            <input type="text" class="modal-form__input" name="user_name" id="name" />
+            <svg class="modal__icons" width="18" height="18">
+              <use href="/assets/img/icons.svg#modal_person"></use>
+            </svg>
+          </div>
+
+          <label class="modal-form__label" for="phone_number">Телефон</label>
+          <div class="modal-icons-wrapper">
+            <input type="tel" class="modal-form__input" name="user_phone" id="phone_number" />
+            <svg class="modal__icons" width="18" height="18">
+              <use href="/assets/img/icons.svg#modal_phone"></use>
+            </svg>
+          </div>
+
+          <label class="modal-form__label" for="email_address">Почта</label>
+          <div class="modal-icons-wrapper">
+            <input type="email" class="modal-form__input" name="user_mail" id="email_address" />
+            <svg class="modal__icons" width="18" height="18">
+              <use href="/assets/img/icons.svg#modal_email"></use>
+            </svg>
+          </div>
+          <label class="modal-form__label">
+            Комментарий
+            <textarea
+              class="modal-form__textarea"
+              name="user-message"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <div class="modal-checkbox">
+            <label
+            [class.modal-checkbox__label]="showModalMenu">
+              <input name="accept-policy" type="checkbox" class="modal-checkbox__input" required />
+              <span class="checkbox-icon"></span>
+              Соглашаюсь с рассылкой и принимаю&nbsp;
+              <a href="">Условия договора</a>
+            </label>
+          </div>
+          <button type="submit" class="button">Отправить</button>
+        </form>
+        <button type="button" class="modal-btn-close"
+        (click)="openModal()">
+          <svg width="11" height="11">
+            <use href="/assets/img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>

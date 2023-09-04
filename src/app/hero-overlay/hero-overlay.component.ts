@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HeroOverlayComponent {
 
+  showModalMenu = false;
+
+
+  openModal(){
+    this.showModalMenu = !this.showModalMenu;
+  }
+
 }
